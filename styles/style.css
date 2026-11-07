@@ -223,6 +223,14 @@ ol {
   overflow: auto;
 }
 
+.content__list-container:has(> .preloader) {
+  overflow: hidden;
+}
+
+.content__list-container:has(> .preloader) > :not(.preloader) {
+  visibility: hidden;
+}
+
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }

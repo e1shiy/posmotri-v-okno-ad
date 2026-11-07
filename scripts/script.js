@@ -139,6 +139,9 @@ async function waitForReadyVideo(video) {
 
 // Устанавливает прелоадер на время загрузки данных ✅
 function showPreloader(tmp, parent) {
+  if (parent === cardsContainer) {
+    parent.scrollTop = 0;
+  }
   const node = tmp.content.cloneNode(true);
   parent.append(node);
   console.log('показал прелоадер');
